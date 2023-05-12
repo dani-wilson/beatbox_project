@@ -24,7 +24,13 @@ RSpec.describe LinkedList do
 
     it 'converts list to a string' do
 
-        expect(list.to_string("doop")).to eq("doop")
+        expect(list.to_string).to eq("doop")
+    end
+
+    it 'creates a new node' do
+        list.append("deep")
+        expect(list.append("deep")).to eq("deep")
+        expect(list.head.data).to eq("doop")
     end
 
 
