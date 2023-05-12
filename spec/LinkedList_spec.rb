@@ -12,6 +12,10 @@ RSpec.describe LinkedList do
         expect(list.head).to eq(nil)
     end
 
+    it 'can append a value' do
+        expect(list.append).to eq("doop")
+    end
+
 
 
 end
