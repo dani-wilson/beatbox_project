@@ -12,4 +12,8 @@ node = Node.new("plop")
     expect(node.data).to eq("plop")
     end
 
+    it 'contains a next node method' do
+        expect(node.next_node). to eq(nil)
+    end
+
 end
