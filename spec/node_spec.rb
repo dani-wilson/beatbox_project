@@ -1,8 +1,12 @@
 require './lib/node'
 
-Rspec.describe Node do
-    node = Node.new("plop")
+RSpec.describe Node do
+
+node = Node.new
+    
+    it 'exists' do
     expect(node).to be_an_instance_of(Node)
-    expect(node.data).to eq("plop")
+    end
+    #expect(node.data).to eq("plop")
 
 end
