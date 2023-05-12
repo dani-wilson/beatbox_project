@@ -10,20 +10,20 @@ class LinkedList
         if @head.nil?
             self.head = Node.new(data, nil)
         else
-            old_head = @head
-            @head = Node.new(data, old_head)
+            new_node = Node.new(data, nil)
+            @head.next_node = new_node
         end
-        return @head.data
+        @count += 1
+        return data
     end
 
     def count
-        if !@head.nil?
-            @count += 1
-        end
+        @count
     end
 
-    def to_string(data)
-        data.to_str
+    def to_string
+        x = @head.data
+        x.to_s
     end
 
     
