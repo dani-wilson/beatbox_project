@@ -20,11 +20,11 @@ class LinkedList
         if !@head.nil?
             @count += 1
         end
-        
     end
 
-
-
+    def to_string(data)
+        data.to_str
+    end
 
     
 
