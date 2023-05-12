@@ -3,6 +3,7 @@ class LinkedList
 
     def initialize
         self.head = nil
+        @count = 0
     end
 
     def append(data)
@@ -14,6 +15,15 @@ class LinkedList
         end
         return @head.data
     end
+
+    def count
+        if !@head.nil?
+            @count += 1
+        end
+        
+    end
+
+
 
 
     
