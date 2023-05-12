@@ -16,4 +16,10 @@ node = Node.new("plop")
         expect(node.next_node). to eq(nil)
     end
 
+    it 'returns a node object' do
+        newnode = Node.new("Frrzt")
+        
+        node.next_node = newnode
+    end
+
 end
