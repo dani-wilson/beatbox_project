@@ -33,5 +33,10 @@ RSpec.describe LinkedList do
         expect(list.head.data).to eq("doop")
     end
 
+    it 'returns a new string with both nodes' do
+        
+        expect(list.to_string).to eq("doop deep")
+    end
+
 
 end
