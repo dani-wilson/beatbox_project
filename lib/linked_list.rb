@@ -39,6 +39,8 @@ class LinkedList
             new_node = Node.new(data, @head)
             @head = new_node
         end
+        @count += 1
+        return data
     end
 
 
