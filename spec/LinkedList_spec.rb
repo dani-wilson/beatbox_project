@@ -48,5 +48,14 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(3)
     end
 
+    it 'can insert data at any point in the list' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        list.insert(1, "woo")
+        expect(list.insert(1, "woo")).to eq("woo")
+        expect(list.to_string).to eq("dop woo plop suu")
+    end
 
 end
