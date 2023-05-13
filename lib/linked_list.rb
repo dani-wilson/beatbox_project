@@ -31,6 +31,18 @@ class LinkedList
         beats.join(" ")
     end
 
+    def prepend(data)
+        if @head.nil?
+        new_node = Node.new(data, nil)
+        @head = new_node
+        else
+            new_node = Node.new(data, @head)
+            @head = new_node
+        end
+    end
+
+
+
     
 
 end
