@@ -22,8 +22,13 @@ class LinkedList
     end
 
     def to_string
-        x = @head.data
-        x.to_s
+        beats = []
+        current_node = @head
+        until current_node == nil
+            beats << current_node.data
+            current_node = current_node.next_node
+        end
+        beats.join(" ")
     end
 
     
