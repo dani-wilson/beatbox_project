@@ -92,9 +92,11 @@ RSpec.describe LinkedList do
         list_2.append("shu")
         list_2.append("blop")
         expect(list_2.pop).to eq("blop")
+        expect(list_2.to_string).to eq("deep woo shi shu")
         expect(list_2.pop).to eq("shu")
-        expect(list_2.to_string). to eq("deep woo shi")
+        expect(list_2.to_string).to eq("deep woo shi")
     end
+
 
 
 
