@@ -4,40 +4,40 @@ require './lib/node'
 RSpec.describe LinkedList do
     list = LinkedList.new
 
-    xit 'exists' do
+    it 'exists' do
         expect(list).to be_an_instance_of(LinkedList)
     end
 
-    xit 'returns nil if head is empty' do
+    it 'returns nil if head is empty' do
         expect(list.head).to eq(nil)
     end
 
-    xit 'can append a value' do
+    it 'can append a value' do
 
         expect(list.append("doop")).to eq("doop")
     end
 
-    xit 'can count the number of nodes in a list' do
+    it 'can count the number of nodes in a list' do
 
     expect(list.count).to eq(1)
     end 
 
-    xit 'converts list to a string' do
+    it 'converts list to a string' do
 
         expect(list.to_string).to eq("doop")
     end
 
-    xit 'creates a new node' do
+    it 'creates a new node' do
         expect(list.append("deep")).to eq("deep")
         expect(list.head.data).to eq("doop")
     end
 
-    xit 'returns a new string with both nodes' do
+    it 'returns a new string with both nodes' do
         
         expect(list.to_string).to eq("doop deep")
     end
 
-    xit 'prepends a node' do
+    it 'prepends a node' do
         list = LinkedList.new
         list.append("plop")
         list.append("suu")
@@ -47,7 +47,7 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(3)
     end
 
-    xit 'can insert data at any point in the list' do
+    it 'can insert data at any point in the list' do
         list = LinkedList.new
         list.append("plop")
         list.append("suu")
@@ -72,6 +72,20 @@ RSpec.describe LinkedList do
         expect(list_2.find(2, 1)).to eq("shi")
         expect(list_2.find(2, 3)).to eq("shi shu blop")
     end
+
+    it 'can test the includes? method' do
+        list_2 = LinkedList.new
+        list_2.append("deep")
+        list_2.append("woo")
+        list_2.append("shi")
+        list_2.append("shu")
+        list_2.append("blop")
+        expect(list_2.includes?("deep")).to eq(true)
+        expect(list_2.includes?("dep")).to eq(false)
+    end
+
+
+
 
 
 end
