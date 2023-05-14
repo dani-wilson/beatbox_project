@@ -105,5 +105,26 @@ class LinkedList
         false
     end
 
+    def pop
+        current_node = @head
+        tail = current_node.next_node.nil?
+        previous_node = nil
+        until current_node.next_node == nil
+            previous_node = current_node
+            current_node = previous_node.next_node
+        end
+        return_string = []
+        return_string << current_node.data + " "
+        puts current_node.data
+        return current_node.data
+        current_node = previous_node
+        puts current_node.data
+        @count -= 1
+        return to_string
+    end
+
+
+
+
 end
 
