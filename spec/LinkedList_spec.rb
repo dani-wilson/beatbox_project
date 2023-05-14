@@ -70,6 +70,7 @@ RSpec.describe LinkedList do
         #puts list.head.data
         #puts list_2.to_string
         expect(list_2.find(2, 1)).to eq("shi")
+        expect(list_2.find(2, 3)).to eq("shi shu blop")
     end
 
 
