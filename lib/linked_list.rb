@@ -9,15 +9,25 @@ class LinkedList
     end
 
     def append(data)
-        current_node = @head
         if @head.nil?
             self.head = Node.new(data, nil)
         else
+            current_node = @head
             new_node = Node.new(data, nil)
+            #print "Current Node Data - "
+            #puts current_node.data
+            #print "New Node Data - "
+            #puts new_node.data
             until current_node.next_node.nil?
+            #print "Is nil? - "
+            #puts current_node.data
             current_node = current_node.next_node
             end
+            #print "This is the nil node - "
+            #puts current_node.data
             current_node.next_node = new_node
+            #print "this is the next node - "
+            #puts current_node.next_node.data
         end
         @count += 1
         return data
@@ -68,14 +78,20 @@ class LinkedList
     def find(position, length)
         counter = 0
         current_node = @head
-        #puts current_node.data
             until counter == position
+                #print "current node data - "
                 #puts current_node.data
                 current_node = current_node.next_node
+                #"new current node - "
                 #puts current_node.data
                 counter += 1
-                return current_node.data
             end
+            return_array = []
+            length.times do
+                return_array << current_node.data
+                current_node = current_node.next_node
+            end
+            return return_array.join(" ")
     end
 
     # def includes?
