@@ -43,8 +43,22 @@ class LinkedList
         return data
     end
 
-
+    def insert(index, data)
+        if @head.nil?
+            new_node = Node.new(data, nil)
+            @head = new_node
+        else
+            current_node = @head
+            new_node = Node.new(data, nil)
+            (index - 1).times do
+                current_node = current_node.next_node
+            end
+            new_node.next_node = current_node.next_node
+            current_node.next_node = new_node
+        end
+        return data
+    end
 
     
-
 end
+
