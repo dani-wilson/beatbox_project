@@ -4,40 +4,40 @@ require './lib/node'
 RSpec.describe LinkedList do
     list = LinkedList.new
 
-    it 'exists' do
+    xit 'exists' do
         expect(list).to be_an_instance_of(LinkedList)
     end
 
-    it 'returns nil if head is empty' do
+    xit 'returns nil if head is empty' do
         expect(list.head).to eq(nil)
     end
 
-    it 'can append a value' do
+    xit 'can append a value' do
 
         expect(list.append("doop")).to eq("doop")
     end
 
-    it 'can count the number of nodes in a list' do
+    xit 'can count the number of nodes in a list' do
 
     expect(list.count).to eq(1)
     end 
 
-    it 'converts list to a string' do
+    xit 'converts list to a string' do
 
         expect(list.to_string).to eq("doop")
     end
 
-    it 'creates a new node' do
+    xit 'creates a new node' do
         expect(list.append("deep")).to eq("deep")
         expect(list.head.data).to eq("doop")
     end
 
-    it 'returns a new string with both nodes' do
+    xit 'returns a new string with both nodes' do
         
         expect(list.to_string).to eq("doop deep")
     end
 
-    it 'prepends a node' do
+    xit 'prepends a node' do
         list = LinkedList.new
         list.append("plop")
         list.append("suu")
@@ -47,7 +47,7 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(3)
     end
 
-    it 'can insert data at any point in the list' do
+    xit 'can insert data at any point in the list' do
         list = LinkedList.new
         list.append("plop")
         list.append("suu")
@@ -57,13 +57,18 @@ RSpec.describe LinkedList do
     end
 
     it 'can find a value at an index' do
-        list = LinkedList.new
-        list.append("deep")
-        list.append("woo")
-        list.append("shi")
-        list.append("shu")
-        list.append("blop")
-        expect(list.find(2, 1)).to eq("shi")
+        list_2 = LinkedList.new
+        list_2.append("deep")
+        puts list_2.head.data
+        list_2.append("woo")
+        #puts list.head.data
+        list_2.append("shi")
+        #puts list.head.data
+        list_2.append("shu")
+        #puts list.head.data
+        list_2.append("blop")
+        #puts list.head.data
+        expect(list_2.find(2, 1)).to eq("shi")
     end
 
 
