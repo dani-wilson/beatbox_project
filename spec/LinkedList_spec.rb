@@ -57,4 +57,15 @@ RSpec.describe LinkedList do
         expect(list.to_string).to eq("dop woo plop suu")
     end
 
+    it 'can find a value at an index' do
+        list = LinkedList.new
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        expect(list.find(2, 1)).to eq("shi")
+    end
+
+
 end
