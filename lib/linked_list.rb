@@ -1,3 +1,5 @@
+require 'pry'
+
 class LinkedList
     attr_accessor :head
 
@@ -7,11 +9,15 @@ class LinkedList
     end
 
     def append(data)
+        current_node = @head
         if @head.nil?
             self.head = Node.new(data, nil)
         else
             new_node = Node.new(data, nil)
-            @head.next_node = new_node
+            until current_node.next_node.nil?
+            current_node = current_node.next_node
+            end
+            current_node.next_node = new_node
         end
         @count += 1
         return data
@@ -59,6 +65,29 @@ class LinkedList
         return data
     end
 
-    
+    def find(position, length)
+        counter = 0
+        current_node = @head
+        puts current_node.data
+            until counter == position
+                puts current_node.data
+                current_node = current_node.next_node
+                puts current_node.data
+                counter += 1
+                return current_node.data
+            end
+    end
+
+    # def includes?
+    #     node = self.head
+    #     while(!node.nil?)
+    #         if(node.data == data)
+    #             return true
+    #         end
+    #         node = node.next_node
+    #     end
+    #     false
+    # end
+
 end
 
