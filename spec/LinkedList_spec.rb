@@ -59,7 +59,7 @@ RSpec.describe LinkedList do
     it 'can find a value at an index' do
         list_2 = LinkedList.new
         list_2.append("deep")
-        puts list_2.head.data
+        #puts list_2.head.data
         list_2.append("woo")
         #puts list.head.data
         list_2.append("shi")
@@ -68,6 +68,7 @@ RSpec.describe LinkedList do
         #puts list.head.data
         list_2.append("blop")
         #puts list.head.data
+        #puts list_2.to_string
         expect(list_2.find(2, 1)).to eq("shi")
     end
 
