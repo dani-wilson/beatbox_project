@@ -68,11 +68,11 @@ class LinkedList
     def find(position, length)
         counter = 0
         current_node = @head
-        puts current_node.data
+        #puts current_node.data
             until counter == position
-                puts current_node.data
+                #puts current_node.data
                 current_node = current_node.next_node
-                puts current_node.data
+                #puts current_node.data
                 counter += 1
                 return current_node.data
             end
