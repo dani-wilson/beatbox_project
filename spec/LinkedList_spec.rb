@@ -28,7 +28,6 @@ RSpec.describe LinkedList do
     end
 
     it 'creates a new node' do
-        list.append("deep")
         expect(list.append("deep")).to eq("deep")
         expect(list.head.data).to eq("doop")
     end
