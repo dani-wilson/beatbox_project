@@ -84,6 +84,18 @@ RSpec.describe LinkedList do
         expect(list_2.includes?("dep")).to eq(false)
     end
 
+    it 'removes elements from the end of the list' do
+        list_2 = LinkedList.new
+        list_2.append("deep")
+        list_2.append("woo")
+        list_2.append("shi")
+        list_2.append("shu")
+        list_2.append("blop")
+        expect(list_2.pop).to eq("blop")
+        expect(list_2.pop).to eq("shu")
+        expect(list_2.to_string). to eq("deep woo shi")
+    end
+
 
 
 
