@@ -94,16 +94,16 @@ class LinkedList
             return return_array.join(" ")
     end
 
-    # def includes?
-    #     node = self.head
-    #     while(!node.nil?)
-    #         if(node.data == data)
-    #             return true
-    #         end
-    #         node = node.next_node
-    #     end
-    #     false
-    # end
+    def includes?(data)
+        node = self.head
+        while(!node.nil?)
+            if(node.data == data)
+                return true
+            end
+            node = node.next_node
+        end
+        false
+    end
 
 end
 
