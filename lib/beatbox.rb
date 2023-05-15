@@ -17,4 +17,8 @@ class Beatbox
         return data
     end
 
+    def play  
+        `say -r 174 "#{list.to_string}"`
+    end
+
 end
