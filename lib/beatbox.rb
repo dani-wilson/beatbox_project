@@ -2,14 +2,19 @@ require 'pry'
 
 class Beatbox
 
-    attr_reader :list
+    attr_reader     :list
 
     def initialize
         @list = LinkedList.new
     end
 
+ 
+
     def append(data)
-        strings = []
-        
+        data.split(" ").each do |data_string|
+            @list.append(data_string)
+        end
+        return data
+    end
 
 end
