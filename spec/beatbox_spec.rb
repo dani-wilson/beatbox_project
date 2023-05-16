@@ -23,4 +23,13 @@ RSpec.describe Beatbox do
         bb.append("deep doo ditt woo hoo shu")
         # plays the sounds deep doo ditt woo hoo shu
     end
+
+    it 'can validate beats' do
+        bb = Beatbox.new
+    expect(bb.append("deep")).to eq("deep")
+    bb.append("Mississippi")
+    expect(bb.all).to eq("deep")
+    bb.append("tee tee tee Mississippi")
+    expect(bb.all).to eq("tee tee tee deep")
+    end
 end
