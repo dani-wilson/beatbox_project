@@ -28,7 +28,7 @@ RSpec.describe Beatbox do
         expect(bb.append("deep")).to eq("deep")
         bb.append("Mississippi")
         expect(bb.all).to eq("deep")
-        bb.append("tee tee tee Mississippi")
+        bb.prepend("tee tee tee Mississippi")
         expect(bb.all).to eq("tee tee tee deep")
     end
 end
